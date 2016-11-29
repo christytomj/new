@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project activeEnvironment="Default" name="webservice.cgi2sms.com" resourceRoot="" soapui-version="5.0.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:WsdlInterface" wsaVersion="NONE" name="VolaSDKSoapBinding" type="wsdl" bindingName="{http://webservice.cgi2sms.com.br/axis/services/VolaSDK}VolaSDKSoapBinding" soapVersion="1_1" anonymous="optional" definition="http://webservice.cgi2sms.com.br/axis/services/VolaSDK?WSDL" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache type="TEXT" rootPart="http://webservice.cgi2sms.com.br/axis/services/VolaSDK?WSDL"><con:part><con:url>http://webservice.cgi2sms.com.br/axis/services/VolaSDK?WSDL</con:url><con:content><![CDATA[<wsdl:definitions targetNamespace="http://webservice.cgi2sms.com.br/axis/services/VolaSDK" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://webservice.cgi2sms.com.br/axis/services/VolaSDK" xmlns:intf="http://webservice.cgi2sms.com.br/axis/services/VolaSDK" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tns1="urn:BeanService" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <wsdl:types>
+    <schema targetNamespace="urn:BeanService" xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <complexType name="StatusPartResult">
+        <sequence>
+          <element name="ID" nillable="true" type="xsd:string"/>
+          <element name="explanation" nillable="true" type="xsd:string"/>
+          <element name="status" type="xsd:int"/>
+        </sequence>
+      </complexType>
+      <complexType name="MessageStatusResult">
+        <sequence>
+          <element name="result" type="xsd:int"/>
+          <element name="status" nillable="true" type="impl:ArrayOf_tns1_StatusPartResult"/>
+        </sequence>
+      </complexType>
+      <complexType name="ID">
+        <sequence>
+          <element name="id" nillable="true" type="impl:ArrayOf_xsd_string"/>
+          <element name="teste" type="xsd:int"/>
+        </sequence>
+      </complexType>
+      <complexType name="Target">
+        <sequence>
+          <element name="ID" nillable="true" type="xsd:string"/>
+          <element name="phone" nillable="true" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="Message">
+        <sequence>
+          <element name="ID" nillable="true" type="xsd:string"/>
+          <element name="body" nillable="true" type="xsd:string"/>
+          <element name="schedule" nillable="true" type="xsd:string"/>
+          <element name="sender" nillable="true" type="xsd:string"/>
+          <element name="target" nillable="true" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="ReceivedPartResult">
+        <sequence>
+          <element name="dateTime" nillable="true" type="xsd:string"/>
+          <element name="message" nillable="true" type="xsd:string"/>
+          <element name="sender" nillable="true" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="TargetPartResult">
+        <sequence>
+          <element name="result" type="xsd:int"/>
+          <element name="target" nillable="true" type="xsd:string"/>
+        </sequence>
+      </complexType>
+      <complexType name="CreditResult">
+        <sequence>
+          <element name="credit" type="xsd:float"/>
+          <element name="result" type="xsd:int"/>
+        </sequence>
+      </complexType>
+      <complexType name="SendResult">
+        <sequence>
+          <element name="messages" nillable="true" type="impl:ArrayOf_tns1_TargetPartResult"/>
+          <element name="result" type="xsd:int"/>
+        </sequence>
+      </complexType>
+      <complexType name="MessageReceiveResult">
+        <sequence>
+          <element name="messageCount" type="xsd:int"/>
+          <element name="messages" nillable="true" type="impl:ArrayOf_tns1_ReceivedPartResult"/>
+          <element name="result" type="xsd:int"/>
+        </sequence>
+      </complexType>
+    </schema>
+    <schema targetNamespace="http://webservice.cgi2sms.com.br/axis/services/VolaSDK" xmlns="http://www.w3.org/2001/XMLSchema">
+      <import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <complexType name="ArrayOf_tns1_StatusPartResult">
+        <complexContent>
+          <restriction base="soapenc:Array">
+            <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:StatusPartResult[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOf_xsd_string">
+        <complexContent>
+          <restriction base="soapenc:Array">
+            <attribute ref="soapenc:arrayType" wsdl:arrayType="xsd:string[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOf_tns1_TargetPartResult">
+        <complexContent>
+          <restriction base="soapenc:Array">
+            <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:TargetPartResult[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOf_tns1_ReceivedPartResult">
+        <complexContent>
+          <restriction base="soapenc:Array">
+            <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:ReceivedPartResult[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOf_tns1_Target">
+        <complexContent>
+          <restriction base="soapenc:Array">
+            <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:Target[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </restriction>
+        </complexContent>
+      </complexType>
+      <complexType name="ArrayOf_tns1_Message">
+        <complexContent>
+          <restriction base="soapenc:Array">
+            <attribute ref="soapenc:arrayType" wsdl:arrayType="tns1:Message[]" xmlns:wsdl1="http://schemas.xmlsoap.org/wsdl/"/>
+          </restriction>
+        </complexContent>
+      </complexType>
+    </schema>
+  </wsdl:types>
+  <wsdl:message name="sendSeveralMessageResponse">
+    <wsdl:part name="sendSeveralMessageReturn" type="tns1:SendResult"/>
+  </wsdl:message>
+  <wsdl:message name="sendSeveralMessageRequest">
+    <wsdl:part name="user" type="xsd:string"/>
+    <wsdl:part name="password" type="xsd:string"/>
+    <wsdl:part name="testMode" type="xsd:boolean"/>
+    <wsdl:part name="message" type="impl:ArrayOf_tns1_Message"/>
+  </wsdl:message>
+  <wsdl:message name="getMessageStatusResponse">
+    <wsdl:part name="getMessageStatusReturn" type="tns1:MessageStatusResult"/>
+  </wsdl:message>
+  <wsdl:message name="sendMessageResponse">
+    <wsdl:part name="sendMessageReturn" type="xsd:int"/>
+  </wsdl:message>
+  <wsdl:message name="getCreditRequest">
+    <wsdl:part name="user" type="xsd:string"/>
+    <wsdl:part name="password" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="getMessageStatusRequest">
+    <wsdl:part name="user" type="xsd:string"/>
+    <wsdl:part name="password" type="xsd:string"/>
+    <wsdl:part name="ids" type="impl:ArrayOf_xsd_string"/>
+  </wsdl:message>
+  <wsdl:message name="messageReceiveRequest">
+    <wsdl:part name="user" type="xsd:string"/>
+    <wsdl:part name="password" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="sendMessageRequest">
+    <wsdl:part name="user" type="xsd:string"/>
+    <wsdl:part name="password" type="xsd:string"/>
+    <wsdl:part name="testMode" type="xsd:boolean"/>
+    <wsdl:part name="sender" type="xsd:string"/>
+    <wsdl:part name="target" type="xsd:string"/>
+    <wsdl:part name="body" type="xsd:string"/>
+    <wsdl:part name="ID" type="xsd:string"/>
+    <wsdl:part name="schedule" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="sendBatchResponse">
+    <wsdl:part name="sendBatchReturn" type="tns1:SendResult"/>
+  </wsdl:message>
+  <wsdl:message name="messageReceiveResponse">
+    <wsdl:part name="messageReceiveReturn" type="tns1:MessageReceiveResult"/>
+  </wsdl:message>
+  <wsdl:message name="sendBatchRequest">
+    <wsdl:part name="user" type="xsd:string"/>
+    <wsdl:part name="password" type="xsd:string"/>
+    <wsdl:part name="testMode" type="xsd:boolean"/>
+    <wsdl:part name="message" type="xsd:string"/>
+    <wsdl:part name="sender" type="xsd:string"/>
+    <wsdl:part name="target" type="impl:ArrayOf_tns1_Target"/>
+    <wsdl:part name="schedule" type="xsd:string"/>
+  </wsdl:message>
+  <wsdl:message name="getCreditResponse">
+    <wsdl:part name="getCreditReturn" type="tns1:CreditResult"/>
+  </wsdl:message>
+  <wsdl:portType name="VolaSDK">
+    <wsdl:operation name="getCredit" parameterOrder="user password">
+      <wsdl:input message="impl:getCreditRequest" name="getCreditRequest"/>
+      <wsdl:output message="impl:getCreditResponse" name="getCreditResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="sendMessage" parameterOrder="user password testMode sender target body ID schedule">
+      <wsdl:input message="impl:sendMessageRequest" name="sendMessageRequest"/>
+      <wsdl:output message="impl:sendMessageResponse" name="sendMessageResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="sendBatch" parameterOrder="user password testMode message sender target schedule">
+      <wsdl:input message="impl:sendBatchRequest" name="sendBatchRequest"/>
+      <wsdl:output message="impl:sendBatchResponse" name="sendBatchResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="sendSeveralMessage" parameterOrder="user password testMode message">
+      <wsdl:input message="impl:sendSeveralMessageRequest" name="sendSeveralMessageRequest"/>
+      <wsdl:output message="impl:sendSeveralMessageResponse" name="sendSeveralMessageResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="getMessageStatus" parameterOrder="user password ids">
+      <wsdl:input message="impl:getMessageStatusRequest" name="getMessageStatusRequest"/>
+      <wsdl:output message="impl:getMessageStatusResponse" name="getMessageStatusResponse"/>
+    </wsdl:operation>
+    <wsdl:operation name="messageReceive" parameterOrder="user password">
+      <wsdl:input message="impl:messageReceiveRequest" name="messageReceiveRequest"/>
+      <wsdl:output message="impl:messageReceiveResponse" name="messageReceiveResponse"/>
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="VolaSDKSoapBinding" type="impl:VolaSDK">
+    <wsdlsoap:binding style="rpc" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <wsdl:operation name="getCredit">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getCreditRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.vola.com.br" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="getCreditResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.cgi2sms.com.br/axis/services/VolaSDK" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendMessage">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="sendMessageRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.vola.com.br" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="sendMessageResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.cgi2sms.com.br/axis/services/VolaSDK" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendBatch">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="sendBatchRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.vola.com.br" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="sendBatchResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.cgi2sms.com.br/axis/services/VolaSDK" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="sendSeveralMessage">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="sendSeveralMessageRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.vola.com.br" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="sendSeveralMessageResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.cgi2sms.com.br/axis/services/VolaSDK" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getMessageStatus">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="getMessageStatusRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.vola.com.br" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="getMessageStatusResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.cgi2sms.com.br/axis/services/VolaSDK" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="messageReceive">
+      <wsdlsoap:operation soapAction=""/>
+      <wsdl:input name="messageReceiveRequest">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.vola.com.br" use="encoded"/>
+      </wsdl:input>
+      <wsdl:output name="messageReceiveResponse">
+        <wsdlsoap:body encodingStyle="http://schemas.xmlsoap.org/soap/encoding/" namespace="http://webservice.cgi2sms.com.br/axis/services/VolaSDK" use="encoded"/>
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="VolaSDKService">
+    <wsdl:port binding="impl:VolaSDKSoapBinding" name="VolaSDK">
+      <wsdlsoap:address location="http://webservice.cgi2sms.com.br/axis/services/VolaSDK"/>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>]]></con:content><con:type>http://schemas.xmlsoap.org/wsdl/</con:type></con:part></con:definitionCache><con:endpoints><con:endpoint>http://webservice.cgi2sms.com.br/axis/services/VolaSDK</con:endpoint></con:endpoints><con:operation isOneWay="false" action="" name="getCredit" bindingOperationName="getCredit" type="Request-Response" outputName="getCreditResponse" inputName="getCreditRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings><con:setting id="com.eviware.soapui.impl.wsdl.WsdlRequest@request-headers">&lt;xml-fragment/></con:setting></con:settings><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservice.cgi2sms.com.br/axis/services/VolaSDK</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.vola.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:getCredit soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <user xsi:type="xsd:string">isitec</user>
+         <password xsi:type="xsd:string">9desetembro</password>
+      </web:getCredit>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservice.cgi2sms.com.br/axis/services/VolaSDK/VolaSDK/getCreditRequest"/><con:wsrmConfig version="1.2"/></con:call></con:operation><con:operation isOneWay="false" action="" name="getMessageStatus" bindingOperationName="getMessageStatus" type="Request-Response" outputName="getMessageStatusResponse" inputName="getMessageStatusRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservice.cgi2sms.com.br/axis/services/VolaSDK</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.vola.com.br" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:getMessageStatus soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <user xsi:type="xsd:string">?</user>
+         <password xsi:type="xsd:string">?</password>
+         <ids xsi:type="vol:ArrayOf_xsd_string" soapenc:arrayType="xsd:string[]" xmlns:vol="http://webservice.cgi2sms.com.br/axis/services/VolaSDK"/>
+      </web:getMessageStatus>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservice.cgi2sms.com.br/axis/services/VolaSDK/VolaSDK/getMessageStatusRequest"/></con:call></con:operation><con:operation isOneWay="false" action="" name="messageReceive" bindingOperationName="messageReceive" type="Request-Response" outputName="messageReceiveResponse" inputName="messageReceiveRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservice.cgi2sms.com.br/axis/services/VolaSDK</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.vola.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:messageReceive soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <user xsi:type="xsd:string">?</user>
+         <password xsi:type="xsd:string">?</password>
+      </web:messageReceive>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservice.cgi2sms.com.br/axis/services/VolaSDK/VolaSDK/messageReceiveRequest"/></con:call></con:operation><con:operation isOneWay="false" action="" name="sendBatch" bindingOperationName="sendBatch" type="Request-Response" outputName="sendBatchResponse" inputName="sendBatchRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservice.cgi2sms.com.br/axis/services/VolaSDK</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.vola.com.br" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:sendBatch soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <user xsi:type="xsd:string">?</user>
+         <password xsi:type="xsd:string">?</password>
+         <testMode xsi:type="xsd:boolean">?</testMode>
+         <message xsi:type="xsd:string">?</message>
+         <sender xsi:type="xsd:string">?</sender>
+         <target xsi:type="vol:ArrayOf_tns1_Target" soapenc:arrayType="urn:Target[]" xmlns:vol="http://webservice.cgi2sms.com.br/axis/services/VolaSDK" xmlns:urn="urn:BeanService"/>
+         <schedule xsi:type="xsd:string">?</schedule>
+      </web:sendBatch>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservice.cgi2sms.com.br/axis/services/VolaSDK/VolaSDK/sendBatchRequest"/></con:call></con:operation><con:operation isOneWay="false" action="" name="sendMessage" bindingOperationName="sendMessage" type="Request-Response" outputName="sendMessageResponse" inputName="sendMessageRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservice.cgi2sms.com.br/axis/services/VolaSDK</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.vola.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:sendMessage soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <user xsi:type="xsd:string">?</user>
+         <password xsi:type="xsd:string">?</password>
+         <testMode xsi:type="xsd:boolean">?</testMode>
+         <sender xsi:type="xsd:string">?</sender>
+         <target xsi:type="xsd:string">?</target>
+         <body xsi:type="xsd:string">?</body>
+         <ID xsi:type="xsd:string">?</ID>
+         <schedule xsi:type="xsd:string">?</schedule>
+      </web:sendMessage>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservice.cgi2sms.com.br/axis/services/VolaSDK/VolaSDK/sendMessageRequest"/></con:call></con:operation><con:operation isOneWay="false" action="" name="sendSeveralMessage" bindingOperationName="sendSeveralMessage" type="Request-Response" outputName="sendSeveralMessageResponse" inputName="sendSeveralMessageRequest" receivesAttachments="false" sendsAttachments="false" anonymous="optional"><con:settings/><con:call name="Request 1"><con:settings/><con:encoding>UTF-8</con:encoding><con:endpoint>http://webservice.cgi2sms.com.br/axis/services/VolaSDK</con:endpoint><con:request><![CDATA[<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.vola.com.br" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:sendSeveralMessage soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <user xsi:type="xsd:string">?</user>
+         <password xsi:type="xsd:string">?</password>
+         <testMode xsi:type="xsd:boolean">?</testMode>
+         <message xsi:type="vol:ArrayOf_tns1_Message" soapenc:arrayType="urn:Message[]" xmlns:vol="http://webservice.cgi2sms.com.br/axis/services/VolaSDK" xmlns:urn="urn:BeanService"/>
+      </web:sendSeveralMessage>
+   </soapenv:Body>
+</soapenv:Envelope>]]></con:request><con:wsaConfig mustUnderstand="NONE" version="200508" action="http://webservice.cgi2sms.com.br/axis/services/VolaSDK/VolaSDK/sendSeveralMessageRequest"/></con:call></con:operation></con:interface><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/></con:soapui-project>

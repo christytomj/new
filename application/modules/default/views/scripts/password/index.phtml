@@ -1,0 +1,15 @@
+<?php if (!empty($this->formResponse)){ ?>
+<div id="emailSendSuccess">
+    <strong><?= $this->formResponseTitle; ?></strong>
+    <p><?= $this->formResponse; ?></p>
+
+</div>
+<div><p><?= $this->formLink; ?></p></div>
+<?php }else if(!empty($this->formErrorResponse)){ ?>
+<div id="emailSendError">
+    <p><?= $this->formErrorResponse; ?></p>
+</div>
+    <?= $this->form; ?>
+<?php }else{ ?>
+<?= $this->form; ?> 
+<?php } ?>

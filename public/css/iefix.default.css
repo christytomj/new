@@ -1,0 +1,22 @@
+﻿@CHARSET "UTF-8";
+
+/* Estrutura principal
+----------------------------------------------------------------------------- */
+
+#header, #body {
+    width: 809px;
+}
+
+/* Conteúdo ----------------------------------------------------------------- */
+#site{
+    left: 50%;
+    margin-left: -404px;   
+}
+
+#content {
+    height: 350px;
+    left: 14px;
+    _left: 4px;
+    position: relative;
+    width: 800px;
+}

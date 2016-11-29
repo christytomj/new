@@ -1,0 +1,17 @@
+<?php if (!empty($this->formResponse)): ?>
+    <div id="loginError">
+        <strong><?= $this->formResponseTitle; ?></strong>
+        <p><?= $this->formResponse; ?></p>
+    </div>
+<?php endif; ?>
+<?= $this->form; ?>
+<p><a href="<?= 
+        $this->url(array('controller'=>'password', 'action'=>'index'), null);
+        ?>">Esqueci minha senha</a></p>
+<p><a href="<?=
+        $this->url(array('controller'=>'auth', 'action'=>'deactivate'), null);
+        ?>">Parar de Receber Avisos!</a></p>
+<p>
+    Dúvidas e informações entre em contato conosco pelo e-mail
+    <a href="mailto:suporte@lembrefacil.com.br">suporte@lembrefacil.com.br</a>
+</p>

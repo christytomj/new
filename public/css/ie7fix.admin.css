@@ -1,0 +1,60 @@
+﻿@CHARSET "UTF-8";
+
+/* Estrutura principal
+----------------------------------------------------------------------------- */
+
+#header, #body {
+    width: 809px;
+}
+
+/* Conteúdo ----------------------------------------------------------------- */
+#content{
+}
+
+.flexigrid div.bDiv{
+    position: absolute;
+    width: 628px;
+}
+
+.flexigrid{
+    position: absolute;
+    width: 629px;
+}
+*#contentBg{
+    height: 498px;   
+    width: 629px;
+}
+
+#menuBgTop{   
+    margin-left: 0px;
+}
+
+#leftShadow{
+    margin: 73px 0 0 0px;
+}
+
+#middleShadow{ 
+    margin: 74px 0 0 163px;
+    position: absolute;
+}
+
+#content .formElementEmail, #content .formElementPassword {
+    margin-top: -30px;
+}
+
+.advancedSearch {
+    height: 40px;
+    line-height: normal;
+    padding-top: 4px;
+    padding-left: 20px;
+    overflow: auto;
+}
+
+.advancedSearch input {
+    width:100px;
+}
+
+.advancedSearch button {
+    margin-left: 15px;
+    height: 25px;
+}

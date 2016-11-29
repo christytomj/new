@@ -1,0 +1,131 @@
+.rte-zone {
+    border: 1px #999 solid;
+    clear: both;
+}
+
+.rte-zone textarea {
+    padding: 0; 
+    margin: 0;
+    border: 0;
+    position: relative;
+    left:0;
+    clear: both;
+}
+
+.rte-zone iframe {
+    margin-bottom: -4px;
+}
+
+
+.rte-resizer {
+    background: url(../images/backgrounds/content.gif) repeat-x scroll left top;
+    border-top: 1px solid #999999;
+    display: block;
+    height: 15px;
+    width: 100%;
+}
+
+.rte-resizer a { 
+    border-left: 0;
+    border-top: 15px solid transparent;
+    border-right: 15px solid #545e4a;
+    cursor: se-resize;
+    float: right;
+    height: 0;
+    width: 0;    
+}
+
+
+form.structured .rte-toolbar {
+	width: 100%;
+	margin:0;
+	padding: 0;
+	display: block;
+	background: url(../images/backgrounds/content.gif) repeat-x scroll left top;
+	border-bottom: 1px solid #9D9E9E;
+	font: 10px Tahoma, Verdana, Arial, Helvetica, sans-serif;
+}
+
+form.structured .rte-toolbar p {
+	margin: 0;
+	padding: 0;
+	clear: both;
+}
+
+form.structured .rte-toolbar select {
+	font: 10px Tahoma, Verdana, Arial, Helvetica, sans-serif;
+	height: 20px;
+	padding: 0;
+	margin: 0;
+	width: 110px;
+}
+
+form.structured .rte-toolbar div.clear {
+	display: block;
+	clear: both;
+	border: 0;
+	padding: 0;
+	padding: 2px 0 0 0;
+	margin: 0;
+}
+
+form.structured .rte-toolbar ul { 
+	display: block;
+	margin: 0px;
+	padding: 0;
+	width: 100%;
+}
+
+form.structured .rte-toolbar ul li { 
+    border: 1px solid transparent;
+	list-style-type: none; 
+	float: left;
+	padding: 0;
+	margin: 2px;
+	height: 20px;
+}
+
+form.structured .rte-toolbar ul li:hover {
+    border: 1px solid #ccc;
+}
+
+form.structured .rte-toolbar ul li.separator { 
+	height: 16px; 
+	margin: 5px;
+	border-left: 1px solid #ccc; 
+}
+
+form.structured .rte-toolbar ul li a {
+    background-position: center center;
+    background-repeat: no-repeat; 
+	border: 1px solid transparent;
+	display: block; 
+	width: 20px; 
+	height: 20px; 
+	cursor: pointer; 
+	margin: 0;
+	padding: 0; 
+}
+
+form.structured .rte-toolbar ul li a:hover {
+    border-top-color: #fff;
+    border-left-color: #fff;
+    
+}
+
+form.structured .rte-toolbar ul li a.active { 
+	background-color: #C6CBCF; 
+	border: 1px solid #555753; 
+}
+
+form.structured .rte-toolbar ul li a.bold { background-image: url('../images/icons/16x16/bold.png'); }
+form.structured .rte-toolbar ul li a.italic { background-image: url('../images/icons/16x16/italic.png'); }
+form.structured .rte-toolbar ul li a.disable { display: none; background-image: url('../images/icons/16x16/rte_icons.gif'); }
+form.structured .rte-toolbar ul li a.enable { background-image: url('../images/icons/16x16/rte_icons.gif'); }
+form.structured .rte-toolbar ul li a.unorderedList { background-image: url('../images/icons/16x16/list_bullets.png'); }
+form.structured .rte-toolbar ul li a.orderedList{ background-image: url('../images/icons/16x16/list_numbers.png'); }
+form.structured .rte-toolbar ul li a.removeFormat { background-image: url('../images/icons/16x16/clear.png'); }
+form.structured .rte-toolbar ul li a.image { background-image: url('../images/icons/16x16/image.png'); }
+form.structured .rte-toolbar ul li a.word { background-image: url('../images/icons/16x16/rte_icons.gif'); }
+form.structured .rte-toolbar ul li a.link { background-image: url('../images/icons/16x16/chain.png'); }
+form.structured .rte-toolbar ul li a.unlink { background-image: url('../images/icons/16x16/unchain.png'); }

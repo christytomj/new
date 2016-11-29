@@ -1,0 +1,28 @@
+2009-03-05T19:26:12-03:00 DEBUG (7): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aerotd_dev.blog_entries' doesn't exist
+#0 /home/juliano/workspace/aerotd_ajax/library/Zend/Db/Statement.php(283): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /home/juliano/workspace/aerotd_ajax/library/Zend/Db/Adapter/Abstract.php(433): Zend_Db_Statement->execute(Array)
+#2 /home/juliano/workspace/aerotd_ajax/library/Zend/Db/Adapter/Pdo/Abstract.php(230): Zend_Db_Adapter_Abstract->query('SELECT r.title,...', Array)
+#3 /home/juliano/workspace/aerotd_ajax/library/Zend/Db/Adapter/Abstract.php(663): Zend_Db_Adapter_Pdo_Abstract->query('SELECT r.title,...', Array)
+#4 /home/juliano/workspace/aerotd_ajax/application/models/BlogEntry.php(74): Zend_Db_Adapter_Abstract->fetchRow('SELECT r.title,...')
+#5 /home/juliano/workspace/aerotd_ajax/application/modules/default/controllers/WeblogController.php(47): BlogEntry->update(Array)
+#6 /home/juliano/workspace/aerotd_ajax/library/Zend/Controller/Action.php(503): WeblogController->viewAction()
+#7 /home/juliano/workspace/aerotd_ajax/library/Zend/Controller/Dispatcher/Standard.php(285): Zend_Controller_Action->dispatch('viewAction')
+#8 /home/juliano/workspace/aerotd_ajax/library/Zend/Controller/Front.php(934): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#9 /home/juliano/workspace/aerotd_ajax/application/bootstrap.php(97): Zend_Controller_Front->dispatch()
+#10 /home/juliano/workspace/aerotd_ajax/public/index.php(7): Bootstrap->run()
+#11 {main}
+-----------------------------
+2009-03-05T19:26:40-03:00 DEBUG (7): SQLSTATE[42S02]: Base table or view not found: 1146 Table 'aerotd_dev.blog_entries' doesn't exist
+#0 /home/juliano/workspace/aerotd_ajax/library/Zend/Db/Statement.php(283): Zend_Db_Statement_Pdo->_execute(Array)
+#1 /home/juliano/workspace/aerotd_ajax/library/Zend/Db/Adapter/Abstract.php(433): Zend_Db_Statement->execute(Array)
+#2 /home/juliano/workspace/aerotd_ajax/library/Zend/Db/Adapter/Pdo/Abstract.php(230): Zend_Db_Adapter_Abstract->query('SELECT r.title,...', Array)
+#3 /home/juliano/workspace/aerotd_ajax/library/Zend/Db/Adapter/Abstract.php(663): Zend_Db_Adapter_Pdo_Abstract->query('SELECT r.title,...', Array)
+#4 /home/juliano/workspace/aerotd_ajax/application/models/BlogEntry.php(74): Zend_Db_Adapter_Abstract->fetchRow('SELECT r.title,...')
+#5 /home/juliano/workspace/aerotd_ajax/application/modules/default/controllers/WeblogController.php(47): BlogEntry->update(Array)
+#6 /home/juliano/workspace/aerotd_ajax/library/Zend/Controller/Action.php(503): WeblogController->viewAction()
+#7 /home/juliano/workspace/aerotd_ajax/library/Zend/Controller/Dispatcher/Standard.php(285): Zend_Controller_Action->dispatch('viewAction')
+#8 /home/juliano/workspace/aerotd_ajax/library/Zend/Controller/Front.php(934): Zend_Controller_Dispatcher_Standard->dispatch(Object(Zend_Controller_Request_Http), Object(Zend_Controller_Response_Http))
+#9 /home/juliano/workspace/aerotd_ajax/application/bootstrap.php(97): Zend_Controller_Front->dispatch()
+#10 /home/juliano/workspace/aerotd_ajax/public/index.php(7): Bootstrap->run()
+#11 {main}
+-----------------------------

@@ -1,0 +1,221 @@
+@CHARSET "UTF-8";
+
+html, body {
+    height: 100%;
+}
+
+body {
+    background: #838D94 url(../images/public/bg.gif) repeat-x scroll left top;
+}
+
+#verticalOuter {
+    display: table;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    _display: block;
+    _position: relative;
+}
+
+#verticalInner {
+    display: table-cell;
+    vertical-align: middle;
+    _display: block;
+    _position: absolute;
+    _text-align: center;
+    _left: 0px;
+    _width: 100%;
+    _top: expression(this.parentElement.clientHeight / 2 - this.clientHeight / 2);
+}
+
+#top, #content, #bottom {
+    margin: 0 auto;
+    width: 771px;
+}
+
+#top, #bottom {
+    background-image: url(../images/public/loginRound.png);
+}
+
+#top {
+    background-position: left top;
+    height: 18px;
+}
+
+#bottom {
+    background-position: left bottom;
+    height: 24px;
+}
+
+h1 {
+    background: transparent url(../images/public/logo.png) no-repeat scroll left top;
+    height: 75px;
+    margin: 30px 0 20px 50px;
+    text-indent: -9000px;
+    width: 760px;
+}
+
+#content {
+    background: transparent url(../images/public/login.png) repeat-y scroll left top;
+    color: #989A95;
+    font-family: "Lucida Sans Unicode", "Lucida Grande", Garuda, sans-serif;
+    font-size: 12px;
+    min-height: 360px;
+    padding: 10px 0 20px 0;
+    _margin-left: 112px;
+    _height: 360px;
+    text-align: left;
+}
+
+#content a {
+    color: #616A58;
+}
+
+#content a:hover {
+    color: #9BAD75;
+}
+
+#content .formRow {
+    margin-bottom: 20px;
+}
+
+#content label {
+    background: transparent url(../images/public/input.png) no-repeat scroll left top;
+    display: block;
+    height: 31px;
+    line-height: 24px;
+    padding-left: 15px;
+    width: 313px;
+}
+
+#content .formRow {
+    height: 31px;
+}
+
+#content .formElementEmail,
+#content .formElementPassword,
+#content .formElementDeactivateCode {
+    background-color: transparent;
+    border: none;
+    float: left;
+    height: 20px;
+    _margin-top: -30px;
+    padding-top: 5px;
+}
+
+#content .formElementEmail,
+#content .formElementPassword {
+    margin: -32px 0 0 92px;
+    width: 200px;
+}
+
+#content .formElementDeactivateCode {
+    margin: -32px 0 0 150px;
+    width: 150px;
+}
+
+#content .formElementEmail:focus,
+#content .formElementPassword:focus,
+#content .formElementDeactivateCode:focus
+{
+    outline-style: none;
+}
+
+#content .formElementSubmit {
+    background: transparent url(../images/public/acesso.png) no-repeat scroll left top;
+    border: none;
+    color: #616a58;
+    height: 31px;
+    float: right;
+    text-indent: 0;
+    padding-bottom: 4px;
+    width: 85px;
+}
+
+#content #loginError {
+    background-color: #fff5f5;
+    color: red;
+    float: right;
+    font-size: 11px;
+    margin: -90px 40px 0 0;
+    _margin-right: 20px;
+    _overflow: hidden;
+    padding: 10px;
+    width: 290px;
+}
+
+#content #emailSendError {
+    background-color: #fff5f5;
+    color: red;
+    float: right;
+    font-size: 11px;
+    margin: -48px 40px 0 0;
+    padding: 10px;
+    width: 290px;
+    _overflow: hidden;
+    _margin-right: 20px;
+}
+
+#content #emailSendError2 {
+    background-color: #fff5f5;
+    color: red;
+    float: right;
+    font-size: 11px;
+    margin: -70px 40px 0 0;
+    padding: 10px;
+    width: 290px;
+}
+
+#content #emailSendError p {
+    margin: 0;
+}
+
+#content #emailSendError2 p {
+    margin: 0;
+}
+
+#content #emailSendSuccess {
+    background-color: #C7FF8B;
+    color: #58703D;
+    float: right;
+    font-size: 11px;
+    margin: -50px 40px 0 0;
+    _margin-right:20px;
+    padding: 10px;
+    width: 290px;
+}
+
+#content #emailSendSuccess p {
+    margin: 0;
+}
+
+
+#content #loginError p {
+    margin: 0;
+}
+
+#content form, #content p {
+    margin-left: 420px;
+    width: 313px;
+}
+
+#content p {
+    margin-top: 10px;
+}
+
+#content .structured .formRow .errors{
+   /*visibility: hidden;*/
+    top: -4px;
+    position: relative;
+    _top: 0px;
+    _position: relative;
+}
+
+#content .publicSubtitle {
+    padding-left: 500px;
+}
+
+#deactivateError {
+    font-weight: bold;
+    color: red;
+}

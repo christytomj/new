@@ -1,0 +1,611 @@
+﻿@CHARSET "UTF-8";
+
+/* Estrutura principal
+----------------------------------------------------------------------------- */
+
+html, body , #site {
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: #838d94 url("../images/backgrounds/backgroundSite.gif") repeat-x scroll left top;
+    left: 2px;
+    overflow: auto;
+    /*max-height: 768px;*/
+}
+
+#site {
+    /*
+    left: 50%;
+    margin-left: -397px;
+    */
+    margin: 0 auto;
+    width: 794px;
+    position: relative;
+    /*height: 768px;*/
+}
+
+#header, #body {
+    left: 0;
+    position: absolute;
+    width: 100%;    
+}
+
+#header{
+    height: 58px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+
+/* Cabeçalho
+----------------------------------------------------------------------------- */
+
+#header {    
+    color: #fff;
+    font-family: sans-serif;
+    height: 58px; /* Quando alterar, mudar singular.js!!! */
+    top: 0;
+}
+
+#header a {
+    color: #727B81;
+    text-decoration: none;
+}
+
+#header h1, #header ul {
+    line-height: 30px;
+}
+
+/* Título/logo -------------------------------------------------------------- */
+#header h1 {
+    /*background: transparent url(../images/logo_admin.png) no-repeat scroll left top;*/
+    height: 108px;
+    margin: 3px 0 0 30px;
+    text-indent: -999px;
+}
+
+/* Links primários ---------------------------------------------------------- */
+#header ul {
+    font-size: 13px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    z-index: 99;
+}
+
+#header ul li {
+    color: #4497c5;
+    list-style-position: outside;
+    float: left;
+    font-size: 8pt;
+    margin-left: 8px;
+}
+
+#header ul li a {
+    background-image: url(../images/icons/mono-blue.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: block;
+    line-height: 35px;
+    padding: 0 10px 0 23px;
+}
+#header ul li a.help_with {
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    margin-left: -20px;
+}
+
+/*#header ul .profile {
+background-position: 5px top;
+}*/
+
+#header ul .user {
+    background-position: 5px -2px;
+    cursor: default;
+}
+
+#header ul .search {
+    background-position: 5px -35px;
+}
+
+#header ul .help {
+    background-position: 5px -70px;
+}
+
+#header ul .exit {
+    background-position: 5px -105px;
+}
+
+#logo{
+    background: url(../images/backgrounds/logo.gif) no-repeat;
+    height: 43px;
+    margin: 4px 0px 0px 0px;
+    width: 177px;
+}
+
+
+/* Corpo
+----------------------------------------------------------------------------- */
+
+#body {    
+    bottom: 95px;
+    top: 57px;
+    z-index: 11;
+}
+
+/* Barra lateral ------------------------------------------------------------ */
+#sidebar {
+    height: 32px;
+    font-family: sans-serif;
+    font-size: 12pt;
+    left: 2px;
+    margin-left: 0;
+    text-align: left;
+    position: relative;
+    width: 802px;
+    z-index: 12;
+}
+
+#sidebar ul {
+    width: 100%;
+}
+
+#sidebar ul li {
+    float: left;
+    line-height: 33px;
+    list-style-position: outside;
+    width: 393px;
+    text-indent: -999px;
+}
+
+#accounts {
+    background: url(../images/backgrounds/account.png) no-repeat scroll top left;
+}
+
+#accounts.selected, #sidebar #accounts.selected:hover {
+    background-position: 0 -64px;
+}
+
+#programming {
+    background: url(../images/backgrounds/programming.png) no-repeat scroll top left;
+    border-left: 1px solid #f2f2f2;
+}
+
+#programming.selected, #sidebar #programming.selected:hover {
+    background-position: 0 -64px;
+}
+
+#sidebar #accounts.unselected:hover {
+    background-position: 0 -32px;
+}
+
+#sidebar #programming.unselected:hover {
+    background-position: 0 -32px;
+}
+
+#sidebar ul li a:hover{
+    color: #f2f2f2;
+}
+
+#sidebar ul li a {
+    color: #6d7a61;
+    cursor: pointer;
+    display: block;
+    margin-left: 15px;
+    text-decoration: none;
+    text-indent: -999px;
+}
+
+/* Conteúdo ----------------------------------------------------------------- */
+#contentWrapper {
+    background: url(../images/backgrounds/menuBg.png) scroll repeat-x;
+    border-left: 1px solid #f2f2f2;
+    border-right: 1px solid #f2f2f2;
+    color: #545E4A;
+    font-family: sans-serif;
+    font-size: 9pt;
+    line-height: 1.4;
+    margin: 0 5px 0 2px;
+}
+
+#contentWrapper h2 {
+    background: transparent;
+    color: #545e4a;
+    font-size: 22px;
+    line-height: 70px;    
+    z-index: 2;
+}
+
+#contentWrapper .h2Align {   
+    height: 64px;
+    margin: 0 28px 0 20px;
+    z-index: 1;
+}
+
+
+#content {
+    background: #f2f2f2;
+    height: 100%;
+    left: 3px;
+    position: absolute;
+    overflow: auto;
+    right: 6px;    
+}
+
+#contentBg{
+    background: #f2f2f2;
+    height: 100%;
+    left: 2px;
+    position: absolute;
+    overflow: auto;
+    right: 5px;
+}
+
+#content .tip {
+    background: #fdfecd url(../images/icons/arrow-big-left.png) no-repeat scroll 10px center;
+    display: block;
+    font-size: 20px;
+    margin: 30px;
+    padding: 60px 60px 60px 140px;
+    text-align: center;
+    width: 300px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+/*-----Para os botões de ação de Disciplina e Curso----*/
+#action{
+    margin-left: 622px;
+    margin-top: -47px;
+    position: absolute;
+}
+
+/*----Para a tabela de usuários----*/
+#listUser table.tablesorter{
+    margin-top: 63px;
+}
+
+table.tablesorter thead{
+    margin-left: 50px;
+}
+
+#menuBgTop{
+    background: url("../images/backgrounds/menuBgTop.gif") scroll left top repeat-x;
+    height: 17px;
+    position: absolute;
+    top: 57px;
+    width: 167px;
+}
+
+#menuBg{
+    background: url("../images/backgrounds/menuBg.gif") scroll left top repeat-x;
+    height: 100%;
+    left: 2px;
+    position: absolute;
+    top: 74px;
+    width: 163px;
+}
+
+#leftShadow{
+    background: url("../images/backgrounds/leftShadow.jpg") scroll left top no-repeat;
+    height: 100%;
+    margin: 82px 0 0 -1px;
+    position: absolute;
+    width: 4px;
+}
+
+#rightShadow{
+    background: url("../images/backgrounds/rightShadow.gif") scroll left top no-repeat;
+    height: 100%;
+    margin: 75px 0 0 804px;
+    position: absolute;
+    width: 7px;
+}
+
+#content h4 {
+    border-bottom: 1px solid #7A896C;
+    font-size: 14px;
+    margin: 25px 0 15px;
+}
+
+/*--------------- Organiza Tabelas ---------------*/
+.tablesorter tbody tr td{
+    border-bottom: 1px solid #aea9a9;
+    color: #565454;
+    padding: 5px;
+}
+
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+    color: #565454;
+    padding: 3px;
+    font-weight: bold;
+    /*
+    border-bottom: 3px solid red;
+    background-color: #E6EEEE;
+    padding: 4px;
+    border: 1px solid #FFF;
+    font-size: 8pt;
+    */
+}
+
+table.tablesorter thead tr .header {
+    /*
+    background-image: url(../images/bg.gif);
+    */
+    background-repeat: no-repeat;
+    background-position: center right;
+    color: #565454;
+    cursor: pointer;
+    padding-right: 143px;
+}
+
+table.tablesorter thead tr .headerSortUp {
+    background-image: url(../images/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+    background-image: url(../images/desc.gif);
+}
+
+/*----------------------------------------------------------------------------*/
+
+
+/* Rodapé
+----------------------------------------------------------------------------- */
+#footer {
+    bottom: 0;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 30px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+#footer a {
+    color: #fff;
+    float: left;
+    padding: 5px 40px 0 15px;
+}
+/* -------------------------------------------------------------------------- */
+
+
+.break {
+    clear: both;
+    display: block;
+}
+
+.contentLoading {
+    background: transparent url(../images/throbber/bert.gif) no-repeat scroll right bottom;
+    line-height: 15px;
+    padding-right: 140px;
+    position: absolute;
+    top: 120px;
+    right: 30px;
+}
+
+#flex {
+    width: 100%;
+}
+
+#flex .ajaxTrigger {
+    margin-right: 10px;
+}
+
+.toolbar {
+    background: #d6dad3 url(../images/backgrounds/toolbar.png) repeat-x scroll left top ;
+    border-top: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    display: block;
+    height: 34px;
+    left: 0;
+    overflow: hidden;
+    padding-left: 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+.flexigrid .toolbar {
+    position: static;
+}
+
+.withSearch div.pDiv {
+    bottom: -69px;
+}
+.withSearch div.sDiv {
+    display: block;
+    bottom: -38px;
+}
+
+.toolbar li {
+    border: 1px solid transparent;
+    float: left;
+    margin-top: 2px;
+}
+
+.toolbar li:hover {
+    border: 1px solid #ccc;
+}
+
+.toolbar li a {
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    color: #000;
+    cursor: pointer;
+    display: block;
+    line-height: 26px;
+    padding: 0 10px 0 25px;
+    text-decoration: none;
+}
+
+.toolbar li a:hover {
+    border-top-color: #fff;
+    border-left-color: #fff;
+
+}
+
+.toolbar li .print {
+    background-image: url(../images/icons/16x16/print.png);
+}
+
+.toolbar li .edit {
+    background-image: url(../images/icons/16x16/edit.png);
+}
+
+.toolbar li .export {
+    background-image: url(../images/icons/16x16/export.png);
+}
+
+.toolbar li .add {
+    background-image: url(../images/icons/16x16/add.png);
+}   
+
+.toolbar li .delete {
+    background-image: url(../images/icons/16x16/remove.png);
+}
+
+.toolbar li .block {
+    background-image: url(../images/icons/16x16/lock.png);
+}   
+
+.toolbar li .unblock {
+    background-image: url(../images/icons/16x16/unlock.png);
+}
+
+.toolbar li .mail {
+    background-image: url(../images/icons/16x16/mail.png);
+}
+
+.report {
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    padding: 20px 0;
+    position: absolute;
+    right: 0;
+    top: 36px;
+}
+
+.report #reportInfo{
+    background: #e6e6e6 url(../images/icons/info-100.png) no-repeat scroll 30px center;
+    display: block;
+    font-size: 20px;
+    margin: 10px 0 0 30px;
+    padding: 60px 60px 60px 140px;
+    text-align: center;
+    width: 300px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#content .report h4 {
+    margin: 25px 20px 15px 20px;
+}
+
+.report .photo {
+    border: 1px solid #C3C3C3;
+    float: left;
+    margin: 0 0 10px 20px;
+    padding: 2px;
+}
+
+.report dt {
+    float: left;
+    font-weight: bold;
+    margin: 0 20px;
+    text-align: left;
+    width: 160px;
+}
+
+.report dd {
+    padding-bottom: 10px;
+}
+
+.report table {
+    border: 1px solid #7A896C;
+    border-bottom: none;
+    margin-left: 20px;
+    max-width: 800px;
+    width: 90%;
+}
+
+.report thead {
+    background-color: #7A896C;
+    font-size: 10px;
+}
+
+.report th {
+    color: #fff;
+    font-weight: bold;
+    padding: 6px 6px 6px 12px;
+    text-align: left;
+}
+
+.report tbody {
+    border: 1px solid #ddd;
+    font-size: 10px;
+}
+
+.report td {
+    background-color: #fff;
+    border-bottom: 1px solid #bbb;
+    padding: 6px 6px 6px 12px;
+}
+
+.report .even td {
+    background-color: #F9F9F9;
+}
+
+.report .divMulti h3.label {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+#content #help_links div{
+    clear: both;
+    margin: 0 0 0 20px;
+    border: 1px solid transparent;
+    float: left;
+}
+
+#content #help_links div:hover {
+    border: 1px solid #ccc;
+}
+
+#content #help_links div a {
+    background: url(../images/icons/pdf.png) no-repeat;
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    /*color: #000;*/
+    color: #545E4A;
+    cursor: pointer;
+    display: block;
+    line-height: 45px;
+    padding: 0 10px 0 45px;
+    text-decoration: underline;
+}
+
+#content #help_links div .film {
+    background: url(../images/icons/film.png) no-repeat;
+    background-position: 5px center;
+}
+
+#content #help_links div a:hover {
+    border-top-color: #fff;
+    border-left-color: #fff;
+
+}
+
+#help_links h1{
+    margin-left: 20px;
+}

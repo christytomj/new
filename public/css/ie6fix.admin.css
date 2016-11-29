@@ -1,0 +1,137 @@
+﻿@CHARSET "UTF-8";
+
+/* Estrutura principal
+----------------------------------------------------------------------------- */
+
+#header, #body {
+    width: 809px;
+}
+
+/* Conteúdo ----------------------------------------------------------------- */
+#site{
+    left: 50%;
+    margin-left: -404px;   
+}
+
+#contentWrapper h2 {
+    position: absolute;
+}
+
+/*#content {
+    height: 498px;
+    left: 0px;
+    position: relative;
+    width: 630px;
+}*/
+
+#content {
+    height: 498px;
+    left: 0px;
+    position: relative;
+    width: 630px;
+}
+
+#contentBg{
+    height: 498px;
+    width: 630px;
+}
+
+#menuBgTop{   
+    margin-left: 0;
+}
+
+#leftShadow{
+    margin: 73px 0 0 0px;
+}
+
+#middleShadow{
+    margin: 74px 0 0 163px;
+    position: absolute;
+}
+
+#rightShadow{   
+    position: relative;    
+    right: 218px;
+}
+
+.flexigrid
+{
+    height: 392px;
+    /*height: 356px;*/
+}
+
+.flexigrid div.bDiv
+{
+    position: static;
+    bottom: 31px;
+}
+
+.withSearch div.pDiv {
+    bottom: -31px;
+}
+.withSearch div.sDiv {
+    bottom: 0px;
+}
+
+.flexigrid div.pDiv{
+    bottom: -31px;
+    padding-left: 0;
+}
+
+.flexigrid div.bDiv table
+{
+    margin-bottom: 0px;
+}
+
+.flexigrid div.pDiv, .flexigrid div.sDiv {
+    padding-left: 0;
+}
+
+.advancedSearch {
+    height: 40px;
+    line-height: normal;
+    padding-top: 4px;
+    padding-left: 20px;
+    overflow: auto;
+}
+
+.advancedSearch input {
+    width:100px;
+}
+
+.advancedSearch button {
+    margin-left: 15px;
+    height: 25px;
+}
+
+.toolbar li, .toolbar li a{
+    border: 0px solid;    
+}
+
+.toolbar li, .toolbar li a{
+    margin-top: 2px;
+}
+
+form.structured input, form.structured .formElementPassword, form.structured #image{
+    background:#F2F2F2 none repeat scroll 0 0;
+    border:1px solid #7A896C;
+    padding-top:2px;
+    width:325px;
+    height: 18px;
+}
+
+form.structured #image{
+    height: 22px;
+}
+
+form.structured .hint{
+    position: absolute;
+    bottom: 42px;
+}
+
+form.structured .hint div {
+    border: none;
+    height: 0;
+    margin-left: 15px;
+    width: 0;
+}

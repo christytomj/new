@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:web="http://webservice.vola.com.br">
+   <soapenv:Header/>
+   <soapenv:Body>
+      <web:sendMessage soapenv:encodingStyle="http://schemas.xmlsoap.org/soap/encoding/">
+         <user xsi:type="xsd:string">isitec</user>
+         <password xsi:type="xsd:string">9desetembro</password>
+         <testMode xsi:type="xsd:boolean">0</testMode>
+         <sender xsi:type="xsd:string">Mr. Pichlre</sender>
+         <target xsi:type="xsd:string">554898050255</target>
+         <body xsi:type="xsd:string">Funcionando o Web Service (chamando ele no braço), mas pelo site ainda não</body>
+         <ID xsi:type="xsd:string">1x</ID>
+         <schedule xsi:type="xsd:string"/>
+      </web:sendMessage>
+   </soapenv:Body>
+</soapenv:Envelope>

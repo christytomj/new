@@ -1,0 +1,27 @@
+<h2 class="publicSubtitle">Solicitação de bloqueio de SMS</h2>
+<?php if (empty($this->formProcessed)): ?>
+<div class="deactivateMsg">
+    <p>
+        Para não receber SMS do Lembre Fácil, informe o número do seu 
+        telefone com DDD no campo abaixo e clique "Enviar".
+        Você receberá uma mensagem contendo um código de 4 dígitos
+        que deve ser informado no campo a seguir.
+    </p>
+    <p/>
+</div>
+<?php if (!empty($this->formResponse)): ?>
+<div id="deactivateError">
+    <strong><?= $this->formResponseTitle; ?></strong>
+    <p><?= $this->formResponse; ?></p>
+</div>
+<?php endif; ?>
+<?= $this->form; ?>
+<?php else: ?>
+<div id="deactivateError">
+    <strong><?= $this->formResponseTitle; ?></strong>
+    <p><?= $this->formResponse; ?></p>
+</div>
+<?php endif; ?>
+<p><a href="<?= 
+    $this->url(array('controller'=>'index', 'action'=>'index'), null);
+    ?>">Voltar</a></p>

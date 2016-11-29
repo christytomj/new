@@ -1,0 +1,51 @@
+<?= $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+
+    <head>
+        <?= $this->HeadMeta() ?>
+        <?= $this->headTitle() ?>
+        <?= $this->headLink() ?>
+        <?= $this->ie6fix ?>
+        <?= $this->ie7fix ?>
+    </head>
+
+    <body>
+        <div id="site">
+            <div id="header">
+                <div id="logo"></div>
+                <h1><?= $this->siteTitle ?></h1>
+                <ul>
+                    <li><a class="user"><?= $this->userMail ?></a></li>
+                    <li><?= $this->userName ?></li>
+                    <li><a class="help" href="#users/password/">Trocar Senha</a></li>
+                    <li><a class="help" href="mailto:siga@aerotd.com.br">Ajuda</a></li>
+                    <li><a class="exit" href="<?= $this->url(array('module' => 'default', 'controller'=>'index', 'action'=>'logout'), null) ?>">Sair</a></li>
+                </ul>
+            </div>
+            <div id="rightShadow"></div>
+            <div id="menuBgTop"></div>
+            <div id="menuBg"></div>
+            <div id="leftShadow"></div>
+            <div id="middleShadow"></div>
+            <div id="body">
+                <div id="sidebar">
+                    <ul>
+                        <li><a class="ajaxTrigger" href="#site">Conteúdo do Site</a></li>
+                        <li><a class="ajaxTrigger" href="#cellphone">Celulares</a></li>
+                    </ul>
+                </div>
+                <div id="contentWrapper">
+                    <div class="h2Align"><h2></h2></div>
+                    <div id="contentBg"></div>
+                    <div id="content">
+                        <?= $this->data; ?>
+                    </div>
+
+                </div>
+                <span class="break"></span>
+            </div>
+        </div>
+        <?= $this->headScript()?>
+    </body>
+
+</html>

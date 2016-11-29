@@ -1,0 +1,36 @@
+﻿@CHARSET "UTF-8";
+
+#phoneList table td{
+    background: #e5e8e2;
+    padding: 10px;
+    width: 200px;
+}
+
+#phoneList table{
+    background: #f1f1f1;
+}
+
+#phoneList #description{
+    color: #545e4a;
+    float: left;
+    font: 12px sans-serif;
+}
+
+#phoneList #description p{
+    left: 10px;
+    position: relative;
+    top: -10px;
+}
+
+#phoneList #description #label{
+    font-weight: bold;
+    top: 5px;
+}
+
+#phoneList img{
+    border: 1px solid #545e4a;
+    float: left;
+    position: relative;
+    top: 10px;
+
+}

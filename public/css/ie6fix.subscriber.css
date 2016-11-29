@@ -1,0 +1,105 @@
+﻿@CHARSET "UTF-8";
+
+/* Estrutura principal
+----------------------------------------------------------------------------- */
+#header, #body {
+    witdh: 800px;
+}
+
+/* Conteúdo ----------------------------------------------------------------- */
+#contentWrapper h2 {
+    position: absolute;
+}
+
+#content {
+    height: 456px;
+    left: 0px;
+    position: relative;
+    width: 785px;
+}
+
+.flexigrid{
+    height: 392px;
+}
+
+.flexigrid div.bDiv
+{
+    position: absolute;
+    bottom: 31px;
+}
+
+#contentBg{    
+    height: 457px;
+    width: 787px;
+}
+
+#sidebar {
+    margin-bottom: -1px;
+}
+.withSearch div.pDiv {
+    bottom: -31px;
+}
+.withSearch div.sDiv {
+    bottom: 30px;
+}
+
+.flexigrid div.pDiv{
+    bottom: 0px;
+    padding-left: 0;
+}
+
+.flexigrid div.bDiv table
+{
+    margin-bottom: 0px;
+}
+
+.flexigrid div.pDiv, .flexigrid div.sDiv {
+    padding-left: 0;
+}
+
+.toolbar li, .toolbar li a{
+    border: 0px solid;
+}
+
+.toolbar li, .toolbar li a{
+    margin-top: 2px;
+}
+
+form.structured input[type="text"], form.structured .formElementPassword, form.structured #image{
+    background:#F2F2F2 none repeat scroll 0 0;
+    border:1px solid #7A896C;
+    height: 18px;
+    padding-top:2px;
+    width:325px;    
+}
+
+form.structured textarea {
+    background:#F2F2F2 none repeat scroll 0 0;
+    border:1px solid #7A896C;
+    height: 220px;
+    padding-top:2px;
+    width:325px;
+}
+
+form.structured .hint{
+    position: absolute;
+    bottom: 42px;
+}
+
+form.structured .hint div {
+    border: none;
+    height: 0;
+    margin-left: 15px;
+    width: 0;
+}
+
+.toolbar{
+    width: 780px;
+}
+
+.dynamicGroup a, .programmingGroup a {
+    display: inline;
+    float: left;
+}
+
+

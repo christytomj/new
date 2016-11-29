@@ -1,0 +1,141 @@
+/* jqModal base Styling courtesy of;
+	Brice Burgess <bhb@iceburg.net> */
+
+/* The Window's CSS z-index value is respected (takes priority). If none is supplied,
+	the Window's z-index value will be set to 3000 by default (via jqModal.js). */
+	
+.jqmWindow {
+    background-color: #fff;
+    color: #333;
+    display: none;
+    font-family: verdana;
+    font-size: 12px;
+    left: 50%;
+    line-height: 1.4;
+    margin-left: -200px;
+    overflow: hidden;
+    padding: 12px;
+    position: fixed;
+    top: 25%;
+    width: 500px;
+    
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.jqmOverlay {
+    background-color: #000;
+}
+
+.jqmCommands {
+    border-top: 1px solid #ddd;
+    bottom: 0;
+    line-height: 60px;
+    left: 20px;
+    position: absolute;
+    right: 20px;
+    text-align: right;
+}
+
+.jqmCommands a {
+    color: #595959;
+    cursor: pointer;
+    font-size: 13px;
+    margin-left: 20px;
+    text-decoration: none;  
+}
+
+.jqmClose {
+   background: transparent url(../images/icons/close.gif) no-repeat scroll right center;
+   padding-right: 20px  
+}
+
+.jqmContent {
+    padding-left: 80px;    
+    min-height: 300px;
+}
+
+.alertType, .confirmType {
+    background: transparent url(../images/icons/alert-48.png) no-repeat scroll left top;
+}
+
+.infoType {
+    background: transparent url(../images/icons/info-48.png) no-repeat scroll left top;
+}
+
+.processType, .progressType {
+    background: transparent url(../images/throbber/process.gif) no-repeat scroll left top;
+}
+
+.progressType .progress {
+    background-color: #d3d7cf;
+    margin: 30px 30px 0 0;
+    padding: 1px;
+}
+
+.progressType .progress span {
+    background-color: #729fcf;
+    display: block;
+    overflow: hidden;
+    padding: 4px 0;
+    text-indent: -999px;
+}
+
+.formType {
+    padding-left: 0;
+}
+
+.formType h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.formType p {
+    height: 35px;
+}
+
+.formType form {
+    float: left;
+    margin-left: 346px;
+    margin-top: -35px;
+    opacity: 0;
+}
+
+.formType label {
+    float: left;
+    text-align: right;
+    width: 131px;
+}
+
+.formType span {
+    float: right;
+    overflow: hidden;
+    text-indent: -999px;
+    width: 260px;
+}
+
+.formType input[type=text], .formType select {
+    float: left;
+    width: 190px;
+}
+
+.formType input[type=button] {
+    float: right;
+    width: 55px;
+}
+
+.dialogInput {
+    margin: 0 40px 10px 0;
+    padding-top: 10px;
+    text-align: right;
+}
+
+.dialogInput .embedCalendar {
+    margin-right: -15px;
+}
+
+.dialogInput .embedCalendar + img {
+    left: -8px;
+}

@@ -1,0 +1,55 @@
+<form id="buySMSForm" class="structured"
+        enctype="application/x-www-form-urlencoded" accept-charset="UTF-8"
+        action="<?= $this->actionUrl ?>" method="post">
+    <fieldset id="fieldset-descriptions" class="buySMS">
+        <?php if ($this->username) { ?>
+        <legend>Conta: <?= $this->username ?> -
+                Celular: <?= $this->cellnumber ?></legend>
+        <?php } ?>
+        <div class="formRow">
+            <label for="actual" class="formLabel required">
+                Créditos atuais:</label>
+            <div class="formElement">
+                <?= $this->actual ?>
+            </div>
+        </div>
+        <div class="formRow">
+            <label for="credit" class="formLabel required">
+                Quantidade SMSs:*</label>
+            <div class="formElement">
+                <input type="text" name="credit" id="credit"
+                       value="" class="formElementInteger" />
+                <div class="hint">
+                    Insira a quantidade de SMS que deseja comprar.</div>
+            </div>
+        </div>
+        <div class="formRow">
+            <script type="text/javascript">
+                function formataValPraMoney(val) {
+                    //alert('val='+val);
+                    var v = Math.floor(val*100).toString();
+                    var vl = v.length;
+                    //alert('v='+v+'; vl='+vl);
+                    v = v.substr(0, vl-2) + ',' + v.substr(vl-2);
+                    //alert('ret v='+v);
+                    if (val < 1) {
+                        v = '0'+v;
+                    }
+                    return v;
+                }
+            </script>
+            <button onclick="
+                $('#valorComprado')
+                    .html(formataValPraMoney($('input#credit').val()*0.2));
+                return false;">Calcular</button>
+            Valor (R$): <span id="valorComprado"></span>
+        </div>
+    </fieldset>
+
+    <div class="formRow">
+        <div class="formElement">
+            <input type="submit" name="confirm" id="confirm"
+                   value="Confirmar" class="formElementSubmit" />
+        </div>
+    </div>
+</form>

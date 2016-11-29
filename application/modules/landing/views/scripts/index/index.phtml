@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        
+        <title>Lembre Fácil - Torne tratamentos médicos ainda mais eficazes!
+        </title>
+        
+        <style>
+           p {
+                font-family: verdana;
+                font-size: 16px;
+                line-height: 1.5em;
+           }
+           #pagina {
+               margin: auto;
+           }
+           #div-h1 {
+                height: 120px;
+                background-color: rgb(113,122,128);
+                clear: both;
+           } 
+           #div-h2 {
+                height: 250px;
+                
+           }
+           #imagem-h2 {
+                float: left;
+                padding-right: 5px;
+                height: 240px;
+           }
+           #texto-h2 {
+                font-family: verdana;
+                font-size: 35px;
+                font-weight: bold;
+                color: rgb(66,107,28);
+                text-shadow: 2px 1px black;
+                text-align: center;
+           }
+           #div-par1 {
+                background-color: rgb(66, 107, 28);
+                color: rgb(242, 242, 242);
+                height: 250px;
+                
+           }
+           #texto-par1 {
+                text-align: center;
+                padding: 60px;
+                margin-bottom: 0px;
+           } 
+           #div-par2 {
+            height: 310px;
+           }
+           #imagem-par2 {
+                float: right;
+                height: 250px;
+                padding-left: 10px;
+           }
+           #texto-par2 {
+                text-align: center;
+                padding: 30px;
+           }
+           #div-contato {
+               height: 90px;
+               background-color: rgb(113,122,128);
+               clear: both;
+           }
+           #texto-contato1 {
+               color: rgb(46, 107, 28);
+               text-shadow: 1px 1px black;
+               text-align: center;
+               padding-top: 25px;
+           }
+           #texto-contato2 {
+               color: rgb(46, 107, 28);
+               text-align: right;
+               font-size: 9px; 
+           }
+           .login-error {
+                    float:left;
+                    width:50%;
+                    color:#ef7474
+                }
+           .img-field {
+                    float:left;
+                    width:33%;
+                }
+           .img-field > img {
+                    margin: 9px;
+                }
+                .login-field{
+                    float:right;
+                    margin:9px;
+                }
+                .login-field > form > input[type="text"],.login-field > form > input[type="password"]{
+                  
+                    margin:4px;
+                    padding: 7px;
+                    border-radius: 4px;
+                    border:none;
+                    margin-left: 0;
+                }
+      
+                .formElementSubmit {
+                    background: rgba(0, 0, 0, 0) url("../images/public/acesso.png") no-repeat scroll left top;
+                    border: medium none;
+                    color: #616a58;
+                    height: 21px;
+                    padding-bottom: 4px;
+                    text-indent: 0;
+                    width: 55px;
+                    border-radius: 6px;
+                    cursor: pointer;
+                }
+                .forgot-password{
+                    color: #a9b999;
+                     font-size: 15px;
+                }
+        </style>
+        <script>
+            var sizeVal = window.screen.availWidth/96;
+        if(sizeVal <= 9.5){
+            window.location.href = "<?php echo '/default'; ?>";
+        }
+        </script>
+    </head>
+    <body>
+        <div id= "pagina">
+        <div id= "div-h1">
+        <div class="img-field">
+         <img src="<?php echo $this->logo; ?>" width="250" height="100">
+        </div>
+            <div class="login-error">
+                <?php if (!empty($this->formResponse)): ?>
+                <div style="width:30%;float:right">
+        <strong><?= $this->formResponseTitle; ?></strong>
+        <br><?= $this->formResponse; ?></div>
+<?php endif; ?>
+            </div>
+        <div class="login-field">
+            <form method="post" action='/landing/index'>
+            <input type="text" name="email" placeholder="E-mail*"/>
+            <br>
+            <input type="password" name="password" placeholder="Senha*"/>
+            <br>
+            <input type="submit" value="Acesso" class="formElementSubmit">
+            <a href="/password/index" class='forgot-password'>Esqueci minha senha</a>
+            </form>
+            
+        </div>
+        </div>
+        
+        <div id= "div-h2"><h2> 
+        <p id= "texto-h2"><img id= "imagem-h2" src="<?php echo $this->image1; ?>" alt="Imagem de paciente segurando medicamento">Tratamentos médicos<br> ainda mais eficazes!</p>
+            
+        </h2></div>
+        
+        <div id= "div-par1"><p id= "texto-par1">O Lembre Fácil é uma ferramenta que ajuda pacientes a lembrarem de tomar seus medicamentos nos dias e horários corretos, a partir de alertas emitidos em seus smartphones. Os alertas são agendados pelos médicos através deste website, de uma forma intuitiva e extremamente rápida. Assim, os pacientes não dependem de vontade própria ou conhecimento técnico para agendarem os avisos. Basta que baixem nosso app em seus smartphones e cuidamos do resto!</p></div>
+        
+        <div id= "div-par2"><p id= "texto-par2"> <img id= "imagem-par2" src="<?php echo $this->image2; ?>" alt="Imagem de paciente tomando medicamento"> Os alertas tem por objetivo promover a máxima aderência aos tratamentos. Ao ajudar os pacientes no uso correto e seguro de medicamentos, os médicos observam que os resultados positivos dos tratamentos tornam-se mais frequentes. O Lembre Fácil proporciona mais eficácia aos tratamentos médicos e, consequentemente, mais qualidade de vida aos pacientes.
+        </p></div>
+        
+        <div id= "div-contato"><p id= "texto-contato1">Clique <a href= "mailto:vendas@lembrefacil.com.br?subject=ContatoSite">aqui</a> para entrar em contato e obter sua licença gratuitamente!</p>
+        <p id= "texto-contato2"> © Copyright 2016 Lembre Fácil - Todos os direitos reservados.</p>
+        </div>
+        </div>
+    </body>
+</html>

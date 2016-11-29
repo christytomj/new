@@ -1,0 +1,32 @@
+﻿@CHARSET "UTF-8";
+
+/* Estrutura principal
+----------------------------------------------------------------------------- */
+
+#content{
+    width: 785px;
+}
+
+.flexigrid div.bDiv
+{
+    position: absolute;
+    width: 785px;
+}
+
+.flexigrid div.pDiv{
+    bottom: -31px;
+}
+
+.withSearch div.pDiv {
+    bottom: -69px;
+}
+
+#accountForm{
+    width: 600px;
+    overflow: hidden;
+}
+
+.dynamicGroup a, .programmingGroup a {
+    display: inline;
+    float: left;
+}

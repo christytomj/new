@@ -1,0 +1,47 @@
+<?= $this->doctype(); ?>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pt-br" lang="pt-br">
+
+    <head>
+        <?= $this->HeadMeta() ?>
+        <?= $this->headTitle() ?>
+        <?= $this->headLink() ?>
+        <?= $this->ie6fix ?>
+        <?= $this->ie7fix ?>
+    </head>
+
+    <body>
+      
+        <div id="site">
+            <div id="header">
+                <div id="logo"></div>
+                <h1><?= $this->siteTitle ?></h1>
+                <ul>
+                    <li><a class="user"><?= $this->userMail ?></a></li>
+                    <li><?= $this->userName ?></li>
+                    <li><a class="help" href="#password/passwordchange">Trocar Senha</a></li>
+                    <li><a class="help_with" href="#dashboard/help">Ajuda</a></li>
+                    <li><a class="exit" href="<?= $this->url(array('module' => 'default', 'controller'=>'index', 'action'=>'logout'), null) ?>">Sair</a></li>
+                </ul>
+            </div>
+            <!--<div id="rightShadow"></div>
+            <div id="leftShadow"></div>-->
+            <div id="body">
+                <div id="sidebar">
+                    <ul>
+                        <a class="ajaxTrigger" href="#accounts"><li id="accounts" class="selected">Contas</li></a>
+                        <a class="ajaxTrigger" href="#programming"><li id="programming" class="unselected">Programaçõess</li></a>
+                    </ul>
+                </div>
+                <div id="contentWrapper">
+                    <div class="h2Align"><h2></h2></div>
+                    <div id="contentBg"></div>
+                    <div id="content">
+                    </div>
+                </div>
+                <span class="break"></span>
+            </div>
+        </div>
+        <?= $this->headScript()?>
+    </body>
+
+</html>

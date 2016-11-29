@@ -1,0 +1,39 @@
+<form id="remedyBoxesForm" class="structured" 
+        enctype="application/x-www-form-urlencoded" accept-charset="UTF-8"
+        action="<?= $this->actionUrl ?>" method="post">
+    <fieldset id="fieldset-descriptions" class="remedyBoxes">
+        <?php if ($this->profile == Users::PROFILE_SUBSCRIBER) { ?>
+            <legend>Assinante: <?= $this->username ?> - <?= $this->cityName ?>/<?= $this->uf ?></legend>
+        <?php } else { ?>
+            <legend><?= ucfirst($this->profile) ?>: <?= $this->username ?></legend>
+        <?php } ?>
+        <div class="formRow">
+            <label for="remedy" class="formLabel required">
+                Remédio:*</label>
+            <div class="formElement">
+                <?= $this->remedySelect ?>
+            </div>
+        </div>
+        <div class="formRow">
+            <label for="dt_start" class="formLabel required">
+                Quantidade:*</label>
+            <div class="formElement">
+                <input type="text" name="qty" id="qty"
+                       value="" class="formElementInteger" />
+                <div class="hint">
+                    Coloque a quantidade de caixas de remédios.</div>
+            </div>
+        </div>
+
+        <input type="hidden" id="remedyBoxesValues"
+               class="formElementHidden" value=""
+               name="remedyBoxesValues"/>
+    </fieldset>
+
+    <div class="formRow">
+        <div class="formElement">
+            <input type="submit" name="confirm" id="confirm"
+                   value="Confirmar" class="formElementSubmit" />
+        </div>
+    </div>
+</form>

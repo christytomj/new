@@ -1,0 +1,597 @@
+﻿@CHARSET "UTF-8";
+
+/* Estrutura principal
+----------------------------------------------------------------------------- */
+
+html, body , #site {
+    height: 100%;
+    max-height: 100%;
+    overflow: hidden;
+}
+
+body {
+    background: #838d94 url("../images/backgrounds/backgroundSite.gif") repeat-x scroll left top;
+    left: 2px;
+    /*max-height: 768px;*/
+}
+
+#site {
+    /*
+    left: 50%;
+    margin-left: -404px;
+    */
+    margin: 0 auto;
+    max-width: 809px;
+    position: relative;
+}
+
+#header, #body {
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+#header{
+    height: 58px;
+}
+
+/* -------------------------------------------------------------------------- */
+
+
+/* Cabeçalho
+----------------------------------------------------------------------------- */
+
+#header {    
+    color: #fff;
+    font-family: sans-serif;
+    height: 58px; /* Quando alterar, mudar singular.js!!! */
+    top: 0;
+}
+
+#header a {
+    color: #727B81;
+    text-decoration: none;
+}
+
+#header h1, #header ul {
+    line-height: 30px;
+}
+
+/* Título/logo -------------------------------------------------------------- */
+#header h1 {
+    /*background: transparent url(../images/logo_admin.png) no-repeat scroll left top;*/
+    height: 108px;
+    margin: 3px 0 0 30px;
+    text-indent: -999px;
+}
+
+/* Links primários ---------------------------------------------------------- */
+#header ul {
+    font-size: 13px;
+    position: absolute;
+    right: 20px;
+    top: 0;
+    z-index: 99;
+}
+
+#header ul li {
+    color: #4497c5;
+    list-style-position: outside;
+    float: left;
+    font-size: 8pt;
+    margin-left: 8px;
+}
+
+#header ul li a {
+    background-image: url(../images/icons/mono-blue.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: block;
+    line-height: 35px;
+    padding: 0 10px 0 23px;
+}
+
+
+/*#header ul .profile {
+background-position: 5px top;
+}*/
+
+#header ul .user {
+    background-position: 5px -2px;
+}
+
+#header ul .search {
+    background-position: 5px -35px;
+}
+
+#header ul .help {
+    background-position: 5px -70px;
+}
+
+#header ul .exit {
+    background-position: 5px -105px;
+}
+
+#logo{
+    background: url(../images/backgrounds/logo.gif) no-repeat;
+    height: 43px;
+    margin: 4px 0px 0px 0px;
+    width: 177px;
+}
+
+
+/* Corpo
+----------------------------------------------------------------------------- */
+
+#body {
+    background: url(../images/backgrounds/header_left2.gif) no-repeat scroll 163px top;
+    bottom: 66px;
+    top: 57px;
+    z-index: 11;
+}
+
+/* Barra lateral ------------------------------------------------------------ */
+#sidebar {
+    float: left;
+    font-family: sans-serif;
+    font-size: 10pt;
+    left: 2px;
+    margin-top: 35px;
+    position: relative;
+    width: 163px;
+}
+
+#sidebar ul {
+    border-top: 1px solid #BFC9CE;
+    width: 163px;
+}
+
+#sidebar li {
+    border-bottom: 1px solid #bfc9ce;
+    line-height: 51px;
+}
+
+#sidebar li:hover {
+    background-color: #6e7d86;
+}
+
+#sidebar li.first {
+    border-top: none;
+}
+
+#sidebar li ul {
+    display: none;
+}
+
+#sidebar a { 
+    color: #e1e1e1;
+    cursor: pointer;
+    display: block;
+    padding-left: 17px;
+    text-decoration: none;
+}
+
+#sidebar a:hover {
+    color: #fefefe;
+}
+
+/* Conteúdo ----------------------------------------------------------------- */
+#contentWrapper {
+    background: url(../images/backgrounds/header_right2.gif) no-repeat scroll right top;
+    color: #545E4A;
+    font-family: "Lucida Sans Unicode", sans-serif;
+    font-size: 9pt;
+    line-height: 1.4;
+    margin: 0 7px 0 163px;
+}
+
+#contentWrapper h2 {
+    background: transparent;
+    color: #545e4a;
+    font-size: 22px;
+    line-height: 70px;
+    z-index: 2;
+}
+
+#contentWrapper .h2Align {
+    background: transparent url(../images/backgrounds/header2.gif) repeat-x scroll left top;
+    border-bottom: 1px solid #7a896c;
+    height: 65px;
+    margin: 0 28px 0 22px;
+    z-index: 1;
+}
+
+
+#content {
+    background: #f2f2f2;
+    height: 100%;
+    left: 167px;
+    position: absolute;
+    overflow: auto;
+    right: 13px;
+
+}
+
+#contentBg{
+    background: #f2f2f2;
+    height: 100%;
+    left: 167px;
+    position: absolute;
+    overflow: auto;
+    right: 13px;
+    z-index: 0;
+}
+
+#content .tip {
+    background: #e6e6e6 url(../images/icons/arrow-big-left.png) no-repeat scroll 10px center;
+    display: block;
+    font-size: 20px;
+    margin: 30px;
+    padding: 60px 60px 60px 140px;
+    text-align: center;
+    width: 300px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+/*-----Para os botões de ação de Disciplina e Curso----*/
+#action{
+    margin-left: 622px;
+    margin-top: -47px;
+    position: absolute;
+}
+
+/*----Para a tabela de usuários----*/
+#listUser table.tablesorter{
+    margin-top: 63px;
+}
+
+table.tablesorter thead{
+    margin-left: 50px;
+}
+
+#menuBgTop{
+    background: url("../images/backgrounds/menuBgTop.gif") scroll left top repeat-x;
+    height: 17px;
+    position: absolute;
+    top: 57px;
+    width: 167px;
+}
+
+#menuBg{
+    background: #5c6970 url("../images/backgrounds/menuBg.gif") scroll left top repeat-x;
+    height: 100%;
+    left: 2px;
+    position: absolute;
+    top: 74px;
+    width: 163px;
+}
+
+#leftShadow{
+    background: #8B9B99;
+    background-repeat: repeat-y;
+    height: 100%;
+    left: 1px;
+    margin: 73px 0 0 0px;
+    position: absolute;
+    width: 1px;
+}
+
+#middleShadow{
+    background: url("../images/backgrounds/middleShadow.jpg") scroll left top no-repeat;
+    background-repeat: repeat-y;
+    height: 100%;
+    margin: 73px 0 0 163px;
+    width: 4px;
+}
+
+#rightShadow{
+    background: url("../images/backgrounds/rightShadow2.png") scroll left top no-repeat;
+    background-repeat: repeat-y;
+    float: right;
+    height: 100%;
+    /*
+    margin: 123px 0 0 796px;
+    position: absolute;
+    */
+    position: relative;
+    right: 7px;
+    top: 123px;
+    width: 6px;
+}
+
+#content h4 {
+    border-bottom: 1px solid #cecece;
+    font-size: 14px;
+    margin: 25px 0 15px;
+}
+
+/*--------------- Organiza Tabelas ---------------*/
+.tablesorter tbody tr td{
+    border-bottom: 1px solid #aea9a9;
+    color: #565454;
+    padding: 5px;
+}
+
+table.tablesorter thead tr th, table.tablesorter tfoot tr th {
+    color: #565454;
+    padding: 3px;
+    font-weight: bold;
+    /*
+    border-bottom: 3px solid red;
+    background-color: #E6EEEE;
+    padding: 4px;
+    border: 1px solid #FFF;
+    font-size: 8pt;
+    */
+}
+
+table.tablesorter thead tr .header {
+    /*
+    background-image: url(../images/bg.gif);
+    */
+    background-repeat: no-repeat;
+    background-position: center right;
+    color: #565454;
+    cursor: pointer;
+    padding-right: 143px;
+}
+
+table.tablesorter thead tr .headerSortUp {
+    background-image: url(../images/asc.gif);
+}
+table.tablesorter thead tr .headerSortDown {
+    background-image: url(../images/desc.gif);
+}
+
+/*----------------------------------------------------------------------------*/
+
+
+/* Rodapé
+----------------------------------------------------------------------------- */
+#footer {
+    bottom: 0;
+    color: #fff;
+    font-family: "Lucida Sans Unicode", Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    line-height: 30px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}
+
+#footer a {
+    color: #fff;
+    float: left;
+    padding: 5px 40px 0 15px;
+}
+/* -------------------------------------------------------------------------- */
+
+
+.break {
+    clear: both;
+    display: block;
+}
+
+.contentLoading {
+    background: transparent url(../images/throbber/bert.gif) no-repeat scroll right bottom;
+    line-height: 15px;
+    padding-right: 140px;
+    position: absolute;
+    top: 80px;
+    right: 30px;
+    z-index: 13;
+}
+
+.flexigrid{
+    border: none;
+}
+
+#flex {
+    width: 100%;
+}
+
+#flex .ajaxTrigger {
+    margin-right: 10px;
+}
+
+.toolbar {
+    background: #BCBDBD url(../images/backgrounds/content2.gif) repeat-x scroll left ;
+    border-bottom: 1px solid #7A896C;
+    display: block;
+    height: 34px;
+    left: 0;
+    overflow: hidden;
+    padding-left: 5px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.advancedSearch {
+    background: #BCBDBD url(../images/backgrounds/content2.gif) repeat-x scroll left top;
+    line-height: 40px;
+    padding-left: 22px;
+}
+
+.advancedSearch input {
+    width: 100px;
+}
+
+.advancedSearch button {
+    margin-left: 15px;
+}
+
+.flexigrid .toolbar {
+    position: static;
+}
+
+.toolbar li {
+    border: 1px solid transparent;
+    float: left;
+    margin-top: 2px;
+}
+
+.toolbar li:hover {
+    border: 1px solid #ccc;
+}
+
+.toolbar li a {
+    background-position: 5px center;
+    background-repeat: no-repeat;
+    border: 1px solid transparent;
+    color: #000;
+    cursor: pointer;
+    display: block;
+    line-height: 26px;
+    padding: 0 10px 0 25px;
+    text-decoration: none;
+}
+
+.toolbar li a:hover {
+    border-top-color: #fff;
+    border-left-color: #fff;
+
+}
+
+.toolbar li .print {
+    background-image: url(../images/icons/16x16/print.png);
+}
+
+.toolbar li .edit {
+    background-image: url(../images/icons/16x16/edit.png);
+}
+
+.toolbar li .export {
+    background-image: url(../images/icons/16x16/export.png);
+}
+
+.toolbar li .exportall {
+    background-image: url(../images/icons/16x16/export_all.png);
+}
+
+.toolbar li .viewselect {
+    background-image: url(../images/icons/16x16/view.png);
+}
+
+.toolbar li .add {
+    background-image: url(../images/icons/16x16/add.png);
+}   
+
+.toolbar li .delete {
+    background-image: url(../images/icons/16x16/remove.png);
+}
+
+.toolbar li .approve {
+    background-image: url(../images/icons/16x16/approve.png);
+}
+
+.toolbar li .block {
+    background-image: url(../images/icons/16x16/lock.png);
+}   
+
+.toolbar li .unblock {
+    background-image: url(../images/icons/16x16/unlock.png);
+}
+
+.toolbar li .mail {
+    background-image: url(../images/icons/16x16/mail.png);
+}
+
+.report {
+    bottom: 0;
+    left: 0;
+    overflow: auto;
+    padding: 20px 0;
+    position: absolute;
+    right: 0;
+    top: 35px;
+}
+
+.report #reportInfo{
+    background: #e6e6e6 url(../images/icons/info-100.png) no-repeat scroll 30px center;
+    display: block;
+    font-size: 20px;
+    margin: 10px 0 0 30px;
+    padding: 60px 60px 60px 140px;
+    text-align: center;
+    width: 300px;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+}
+
+#content .report h4 {
+    margin: 25px 20px 15px 20px;
+}
+
+.report .photo {
+    border: 1px solid #C3C3C3;
+    float: left;
+    margin: 0 0 10px 20px;
+    padding: 2px;
+}
+
+.report dt {
+    float: left;
+    font-weight: bold;
+    margin: 0 20px;
+    text-align: left;
+    width: 161px;
+}
+
+.report dl {
+    margin-top: 10px;
+}
+
+.report dd {
+    padding-bottom: 10px;
+}
+
+.report table {
+    border: 1px solid #7A896C;
+    border-bottom: none;
+    margin-left: 20px;
+    max-width: 800px;
+    width: 90%;
+}
+
+.report thead {
+    background-color: #7A896C;
+    font-size: 10px;
+}
+
+.report th {
+    color: #fff;
+    font-weight: bold;
+    padding: 6px 6px 6px 12px;
+    text-align: left;
+}
+
+.report tbody {
+    border: 1px solid #ddd;
+    font-size: 10px;
+}
+
+.report td {
+    background-color: #fff;
+    border-bottom: 1px solid #bbb;
+    padding: 6px 6px 6px 12px;
+}
+
+.report .even td {
+    background-color: #F9F9F9;
+}
+
+.report .divMulti h3.label {
+    display: none;
+}
+
+.hide {
+    display: none;
+}
+
+#content .flexigrid div.hDiv table {
+    width: 612px;
+}

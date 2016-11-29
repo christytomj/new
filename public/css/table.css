@@ -1,0 +1,72 @@
+.table{
+    width: 100%;
+}
+
+.tableText{
+    font:  100 8pt sans-serif;
+    _font:  100 10pt sans-serif;
+    margin: 2px 0px 0px 12px;
+}
+
+tr{
+    height:27px;
+    text-align: left;
+}
+
+tr.linhaTopo{
+    background: #7a896c;
+    color: white;
+}
+
+.estiloLinha1{
+    background: #f2f2f2;
+}
+
+.estiloLinha2{
+    background: #d6dad3;
+}
+
+#editIcon{
+    background: url("../images/icons/editIcon.png") scroll left top no-repeat;
+    height: 16px;    
+    width: 16px;
+}
+
+.tableButton{
+    background: transparent;
+    border: none;
+    float:left;
+    height: 16px;    
+    margin: 0px 0px 0px 6px;
+    _margin: 2px 0px 0px 8px;
+    padding: 0;
+    width: 20px;
+}
+
+.edit{
+    background: url("../images/backgrounds2/edit.png") scroll left top no-repeat;
+    float:left;
+    height: 16px;    
+    width: 16px;
+}
+
+.report{
+    background: url("../images/backgrounds2/report.png") scroll left top no-repeat;
+    float:left;
+    height: 16px;    
+    width: 16px;
+}
+
+.bookmark{
+    background: url("../images/backgrounds2/bookmark.png") scroll left top no-repeat;
+    float:left;
+    height: 16px;    
+    width: 16px;
+}
+
+.link{
+    background: url("../images/backgrounds2/link.png") scroll left top no-repeat;
+    float:left;
+    height: 16px;    
+    width: 16px;
+}
